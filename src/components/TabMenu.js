@@ -11,7 +11,6 @@ export default function TabMenu() {
     var componentClassName = "tabs is-small is-hidden-desktop is-toggle is-centered is-fullwidth";
     var geoTaggedLinkClass = "navbar-item is-link is-light";
     var mediaLinkClass = "navbar-item is-link is-light";
-    var giroLinkClass = "navbar-item is-link is-light";
     var filterLinkClass = "navbar-item is-link is-light";
 
     if (activeMessages.length > 0) {
@@ -20,9 +19,6 @@ export default function TabMenu() {
 
     if (router !== null && router.pathname == "/media") {
         mediaLinkClass = mediaLinkClass + " is-active";
-    }
-    else if (router !== null && router.pathname == "/giro") {
-        giroLinkClass = giroLinkClass + " is-active";
     }
     else {
         geoTaggedLinkClass = geoTaggedLinkClass + " is-active";
@@ -45,12 +41,6 @@ export default function TabMenu() {
                     <a className={mediaLinkClass}>
                         <span className="icon"><i className="fas fa-image" /></span>
                         <span>All Posts</span>
-                    </a>
-                </Link>
-                <Link href="/giro">
-                    <a className={giroLinkClass}>
-                        <span className="icon"><i className="fas fa-biking" /></span>
-                        <span>Giro d'Italia</span>
                     </a>
                 </Link>
                 <a className={filterLinkClass} onClick={() => showFilterModalVar(true)}>
