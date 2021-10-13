@@ -21,7 +21,7 @@ const ALL_HASHTAGS_LAST7DAYS = gql`
 
 export const GEOMSGS_BY_HASHTAGS_LAST_14_DAYS = gql`
 query($tags: _text!){
-    messages: geomsgs_by_hashtag_last_14_days(args: {tags: $tags}) {
+    messages: gcm_geomsgs_by_hashtag_last_14_days(args: {tags: $tags}) {
         contributor_name
         message_id
         location
@@ -77,7 +77,7 @@ query($msglimit: Int!){
 
 const MSG_BY_ID_QUERY = gql`
 query($messageid: String) {
-    gcm_shared_links(where: {message_id: {_eq: $messageid}}) {
+    shared_links: gcm_shared_links(where: {message_id: {_eq: $messageid}}) {
         message_id
         url
         expanded_url
@@ -86,7 +86,7 @@ query($messageid: String) {
         location
         preview
     }
-    gcm_messages: messages_last_14_days(where: {message_id: {_eq: $messageid}}) {
+    messages: gcm_messages_last_14_days(where: {message_id: {_eq: $messageid}}) {
         harvest_id
         contributor_screen_name
         contributor_name
