@@ -2,24 +2,7 @@ import React from 'react';
 import { useQuery, gql, useReactiveVar } from '@apollo/client';
 import { activeMessageIdVar, showMobileMapMode } from '../appstate/cache'
 import { TwitterTweetEmbed } from 'react-twitter-embed';
-
-const MSG_BY_ID_QUERY = gql`
-query($messageid: String) {
-    shared_links(where: {message_id: {_eq: $messageid}}) {
-        message_id
-        url
-        expanded_url
-        preview
-    }
-    messages: messages_last_14_days(where: {message_id: {_eq: $messageid}}) {
-        contributor_screen_name
-        contributor_name
-        https_contributor_profile_pic
-        message
-        message_id
-        time
-    }
-  }`
+import { MSG_BY_ID_QUERY } from '../appstate/GqlQueries';
 
 export default function MapMediaModal({ messageid }) {
     const { loading, error, data, refetch, networkStatus } = useQuery(

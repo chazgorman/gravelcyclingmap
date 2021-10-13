@@ -1,15 +1,7 @@
 import React from 'react';
 import { useQuery, gql, useReactiveVar } from '@apollo/client';
 import { showFilterModalVar, selectedTopicsVar } from '../appstate/cache'
-
-const TOP30_HASHTAGS_LAST7DAYS = gql`
-{
-  tophashtags: top30_hashtags_last_7_days(limit:10) {
-      tag
-      tagcount
-  }
-}
-`
+import { TOP30_HASHTAGS_LAST7DAYS } from '../appstate/GqlQueries';
 
 export default function HashtagModal() {
     const showFilterModal = useReactiveVar(showFilterModalVar);

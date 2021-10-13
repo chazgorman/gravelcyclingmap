@@ -2,7 +2,7 @@ import { gql } from '@apollo/client';
 
 export const TOP30_HASHTAGS_LAST7DAYS = gql`
 {
-  tophashtags: top30_hashtags_last_7_days(limit:30) {
+  tophashtags: gcm_top30_hashtags_last_7_days(limit:30) {
       tag
       tagcount
   }
@@ -11,7 +11,7 @@ export const TOP30_HASHTAGS_LAST7DAYS = gql`
 
 export const ALL_HASHTAGS_LAST7DAYS = gql`
 {
-  tophashtags: hashtags_last_7_days {
+  tophashtags: gcm_hashtags_last_7_days {
       tag
       message_id
       territory
