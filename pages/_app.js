@@ -11,7 +11,7 @@ class MyApp extends App {
     return (
       <>
         <Head>
-          <title>Pro Cycling Map</title>
+          <title>Gravel Cycling Map</title>
           <meta charSet="utf-8" />
          {/* Use minimum-scale=1 to enable GPU rasterization */}
           <meta

@@ -22,7 +22,7 @@ export default function Navbar() {
         <nav className="navbar is-link is-fixed-top is-transparent" style={{ zIndex: '1000' }}>
             <div className="navbar-brand">
                 <a href="/">
-                    <img src="/static/PCMLogoLight_SideIcon.png" alt="Pro Cycling Map. Explore the World of Pro Cycling!" width="260px" height="60px" />
+                    <img src="/static/PCMLogoLight_SideIcon.png" alt="Gravel Cycling Map. Explore the World of Gravel Cycling!" width="260px" height="60px" />
                 </a>
                 <div className="navbar-burger burger" data-target="navbarExampleTransparentExample">
                     <span></span>
@@ -73,9 +73,6 @@ export default function Navbar() {
                             About
                         </a>
                         <div className="navbar-dropdown is-boxed">
-                            <a className="navbar-item" target="_blank" href="https://twitter.com/ProCyclingMap/">
-                                <i className="fab fa-twitter"></i> Pro Cycling Map on Twitter
-                            </a>
                             <a className="navbar-item" target="_blank" href="https://twitter.com/ChazGorman/">
                                 <i className="fab fa-twitter"></i> Created by Charlie Gorman
                             </a>

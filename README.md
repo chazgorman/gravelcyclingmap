@@ -1,1 +1,1 @@
-Next JS used with Esri JavaScript API for Pro Cycling Map.
+Next JS used with Esri JavaScript API for Gravel Cycling Map.
