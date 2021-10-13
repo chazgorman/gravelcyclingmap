@@ -1,6 +1,6 @@
 import { gql } from '@apollo/client';
 
-const TOP30_HASHTAGS_LAST7DAYS = gql`
+export const TOP30_HASHTAGS_LAST7DAYS = gql`
 {
   tophashtags: top30_hashtags_last_7_days(limit:30) {
       tag
@@ -9,7 +9,7 @@ const TOP30_HASHTAGS_LAST7DAYS = gql`
 }
 `
 
-const ALL_HASHTAGS_LAST7DAYS = gql`
+export const ALL_HASHTAGS_LAST7DAYS = gql`
 {
   tophashtags: hashtags_last_7_days {
       tag
@@ -74,7 +74,7 @@ query($msglimit: Int!){
     }
 }
 `
-const MSG_BY_ID_QUERY = gql`
+export const MSG_BY_ID_QUERY = gql`
 query($messageid: String) {
     shared_links: gcm_shared_links(where: {message_id: {_eq: $messageid}}) {
         message_id
@@ -101,7 +101,7 @@ query($messageid: String) {
     }
   }`
 
-const MSG_BY_ID_QUERY_LAST_14_DAYS = gql`
+export const MSG_BY_ID_QUERY_LAST_14_DAYS = gql`
 query($messageid: String) {
     shared_links: gcm_shared_links(where: {message_id: {_eq: $messageid}}) {
         message_id
