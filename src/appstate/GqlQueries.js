@@ -74,7 +74,6 @@ query($msglimit: Int!){
     }
 }
 `
-
 const MSG_BY_ID_QUERY = gql`
 query($messageid: String) {
     shared_links: gcm_shared_links(where: {message_id: {_eq: $messageid}}) {
@@ -87,6 +86,33 @@ query($messageid: String) {
         preview
     }
     messages: gcm_messages_last_14_days(where: {message_id: {_eq: $messageid}}) {
+        harvest_id
+        contributor_screen_name
+        contributor_name
+        https_contributor_profile_pic
+        message
+        message_id
+        time
+        like_count
+        twitter_favorite_count
+        twitter_favorite_count
+        network
+        location
+    }
+  }`
+
+const MSG_BY_ID_QUERY_LAST_14_DAYS = gql`
+query($messageid: String) {
+    shared_links: gcm_shared_links(where: {message_id: {_eq: $messageid}}) {
+        message_id
+        url
+        expanded_url
+        source
+        host
+        location
+        preview
+    }
+    messages: gcm_messages(where: {message_id: {_eq: $messageid}}) {
         harvest_id
         contributor_screen_name
         contributor_name

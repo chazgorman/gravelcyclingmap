@@ -1,33 +1,7 @@
 import React from 'react';
 import { useQuery, gql } from '@apollo/client';
 import { activeMessageIdVar } from '../appstate/cache'
-
-const MSG_BY_ID_QUERY = gql`
-query($messageid: String) {
-    shared_links(where: {message_id: {_eq: $messageid}}) {
-        message_id
-        url
-        expanded_url
-        source
-        host
-        location
-        preview
-    }
-    messages: messages(where: {message_id: {_eq: $messageid}}) {
-        harvest_id
-        contributor_screen_name
-        contributor_name
-        https_contributor_profile_pic
-        message
-        message_id
-        time
-        like_count
-        twitter_favorite_count
-        twitter_favorite_count
-        network
-        location
-    }
-  }`
+import { MSG_BY_ID_QUERY } from '../appstate/GqlQueries';
 
 export default function Media({ messageid }) {
     const { loading, error, data, refetch, networkStatus } = useQuery(
