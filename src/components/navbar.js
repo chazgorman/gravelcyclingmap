@@ -22,7 +22,7 @@ export default function Navbar() {
         <nav className="navbar is-link is-fixed-top is-transparent" style={{ zIndex: '1000' }}>
             <div className="navbar-brand">
                 <a href="/">
-                    <img src="/static/PCMLogoLight_SideIcon.png" alt="Gravel Cycling Map. Explore the World of Gravel Cycling!" width="260px" height="60px" />
+                    <img src="/static/GCMLogoLight_SideIcon.png" alt="Gravel Cycling Map. Explore the World of Gravel Cycling!" width="260px" height="60px" />
                 </a>
                 <div className="navbar-burger burger" data-target="navbarExampleTransparentExample">
                     <span></span>

@@ -16,3 +16,4 @@ node_modules
 .cache
 .next
 /out
+.DS_Store
