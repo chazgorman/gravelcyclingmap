@@ -81,7 +81,7 @@ export default function Navbar() {
                     <div className="navbar-item">
                         <div className="field is-grouped">
                             <p className="control">
-                                <a className="bd-tw-button button" data-social-network="Twitter" data-social-action="tweet" data-social-target="http://procyclingmap.com" target="_blank" href="https://twitter.com/intent/tweet?text=Check out Pro Cycling Map. Tweets, Instagram posts, and Strava rides from pro cyclists in an online map!&amp;hashtags=procyclingmap,cycling,uci&amp;url=http://procyclingmap.com&amp;">
+                                <a className="bd-tw-button button" data-social-network="Twitter" data-social-action="tweet" data-social-target="http://gravelcyclingmap.com" target="_blank" href="https://twitter.com/intent/tweet?text=Check out Gravel Cycling Map. Tweets and Instagram posts from gravel cyclists all around the world in an online map!&amp;hashtags=gravel,cycling,gravelcup&amp;url=http://gravelcyclingmap.com&amp;">
                                     <span className="icon">
                                         <i className="fab fa-twitter"></i>
                                     </span>
