@@ -19,7 +19,7 @@ export default function Navbar() {
     }
 
     return (
-        <nav className="navbar is-link is-fixed-top is-transparent" style={{ zIndex: '1000', background-color: '#9c5f13' }}>
+        <nav className="navbar is-link is-fixed-top is-transparent" style={{ zIndex: '1000', backgroundColor: '#9c5f13' }}>
             <div className="navbar-brand">
                 <a href="/">
                     <img src="/static/PCMLogoLight_SideIcon.png" alt="Gravel Cycling Map. Explore the World of Gravel Cycling!" width="260px" height="60px" />
