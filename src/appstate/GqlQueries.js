@@ -22,7 +22,7 @@ query ALL_HASHTAGS_LAST7DAYS
 
 export const GEOMSGS_BY_HASHTAGS_LAST_14_DAYS = gql`
 query GEOMSGS_BY_HASHTAGS_LAST_14_DAYS($tags: _text!){
-    messages: gcm_geomsgs_by_hashtag_last_14_days(args: {tags: $tags}) {
+    messages: gcm_geo_msgs_by_hashtag_last_14_days(args: {tags: $tags}) {
         contributor_name
         message_id
         location
@@ -32,7 +32,7 @@ query GEOMSGS_BY_HASHTAGS_LAST_14_DAYS($tags: _text!){
 
 export const GEOMSGS_LAST_14_DAYS = gql`
 query GEOMSGS_LAST_14_DAYS($msglimit: Int!){
-    messages: gcm_geomessages_last_14_days(limit: $msglimit) {
+    messages: gcm_geo_messages_last_14_days(limit: $msglimit) {
         contributor_name
         message_id
         location
