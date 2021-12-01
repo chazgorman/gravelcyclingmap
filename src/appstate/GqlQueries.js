@@ -1,7 +1,7 @@
 import { gql } from '@apollo/client';
 
 export const TOP30_HASHTAGS_LAST7DAYS = gql`
-{
+query TOP30_HASHTAGS_LAST7DAYS {
   tophashtags: gcm_top30_hashtags_last_7_days(limit:30) {
       tag
       tagcount
@@ -10,6 +10,7 @@ export const TOP30_HASHTAGS_LAST7DAYS = gql`
 `
 
 export const ALL_HASHTAGS_LAST7DAYS = gql`
+query ALL_HASHTAGS_LAST7DAYS
 {
   tophashtags: gcm_hashtags_last_7_days {
       tag
@@ -20,7 +21,7 @@ export const ALL_HASHTAGS_LAST7DAYS = gql`
 `
 
 export const GEOMSGS_BY_HASHTAGS_LAST_14_DAYS = gql`
-query($tags: _text!){
+query GEOMSGS_BY_HASHTAGS_LAST_14_DAYS($tags: _text!){
     messages: gcm_geomsgs_by_hashtag_last_14_days(args: {tags: $tags}) {
         contributor_name
         message_id
@@ -30,7 +31,7 @@ query($tags: _text!){
 `
 
 export const GEOMSGS_LAST_14_DAYS = gql`
-query($msglimit: Int!){
+query GEOMSGS_LAST_14_DAYS($msglimit: Int!){
     messages: gcm_geomessages_last_14_days(limit: $msglimit) {
         contributor_name
         message_id
@@ -56,7 +57,7 @@ query($msglimit: Int!){
 // `
 
 export const MSGS_BY_HASHTAGS_LAST_14_DAYS = gql`
-query($tags: _text!){
+query MSGS_BY_HASHTAGS_LAST_14_DAYS($tags: _text!){
     messages: gcm_msgs_by_hashtag_last_14_days(args: {tags: $tags}) {
         contributor_name
         message_id
@@ -66,7 +67,7 @@ query($tags: _text!){
 `
 
 export const MSGS_LAST_14_DAYS = gql`
-query($msglimit: Int!){
+query MSGS_LAST_14_DAYS($msglimit: Int!){
     messages: gcm_messages_last_14_days(limit: $msglimit) {
         contributor_name
         message_id
@@ -75,7 +76,7 @@ query($msglimit: Int!){
 }
 `
 export const MSG_BY_ID_QUERY = gql`
-query($messageid: String) {
+query MSG_BY_ID_QUERY($messageid: String) {
     shared_links: gcm_shared_links(where: {message_id: {_eq: $messageid}}) {
         message_id
         url
@@ -102,7 +103,7 @@ query($messageid: String) {
   }`
 
 export const MSG_BY_ID_QUERY_LAST_14_DAYS = gql`
-query($messageid: String) {
+query MSG_BY_ID_QUERY_LAST_14_DAYS($messageid: String) {
     shared_links: gcm_shared_links(where: {message_id: {_eq: $messageid}}) {
         message_id
         url

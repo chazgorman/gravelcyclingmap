@@ -7,10 +7,10 @@ class MyDocument extends Document {
       <Html lang="en" dir="ltr" style={{ height: '100%', overflowY: 'hidden' }}>
       <Head>
         {/* PWA primary color */}
-        <link
+        {/* <link
           rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Roboto:300,400,500"
-        />
+        /> */}
 
         <link rel="stylesheet" href="https://js.arcgis.com/4.18/esri/css/main.css" />
         <script src="https://js.arcgis.com/4.18/"></script>
