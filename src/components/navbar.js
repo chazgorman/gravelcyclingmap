@@ -52,7 +52,7 @@ export default function Navbar() {
                             </Link>
                         </div>
                     </div>
-                    <div className="navbar-item">
+                    {/* <div className="navbar-item">
                         <div className="field is-grouped">
                             <p className="control">
                                 <a className="button is-mobile" onClick={() => showFilterModalVar(!showFilterModal)}>
@@ -65,7 +65,7 @@ export default function Navbar() {
                                 </a>
                             </p>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
                 <div className="navbar-end">
                     <div className="navbar-item has-dropdown is-hoverable">
