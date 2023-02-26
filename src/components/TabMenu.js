@@ -43,10 +43,10 @@ export default function TabMenu() {
                         <span>All Posts</span>
                     </a>
                 </Link>
-                <a className={filterLinkClass} onClick={() => showFilterModalVar(true)}>
+                {/* <a className={filterLinkClass} onClick={() => showFilterModalVar(true)}>
                     <span className="icon"><i className="fas fa-filter" /></span>
                     <span>Filter</span>
-                </a>
+                </a> */}
             </ul>
         </div>
     );
